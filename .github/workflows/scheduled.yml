@@ -16,13 +16,13 @@ jobs:
   auto-commit:
     runs-on: ubuntu-latest
     steps:
-      # Start Job
-      - name: start Job
-        run: date
-
       # Echo
       - name: echo job
         run: echo "Welcome to 극락코딩"
+
+      # Start Job
+      - name: start Job
+        run: date
 
       # Checkout
       - name: repository checkout
@@ -37,9 +37,9 @@ jobs:
         run: |
           date >> auto-commit.txt
           git add .
-          git config --global user.email "github-actions@github.com"
-          git config --global user.name "github-actions"
-          git commit -am "Inject Date"
+          git config --global user.email "wrjssmjdhappy@gmail.com"
+          git config --global user.name "극락코딩"
+          git commit -am "Inject Date and auto commit"
           git push
 
       # End Job
