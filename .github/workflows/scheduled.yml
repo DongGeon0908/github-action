@@ -36,6 +36,8 @@ jobs:
       - name: Add date and push
         run: |
           date >> auto-commit.txt
+          git init
+          git remote add origin https://github.com/DongGeon0908/github-action
           git add .
           git config --global user.email "wrjssmjdhappy@gmail.com"
           git config --global user.name "극락코딩"
