@@ -23,7 +23,7 @@ jobs:
         uses: actions/checkout@v2
         with:
           repository: DongGeon0908/github-action
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.GOOFY_GITHUB_TOKEN }}
           path: github-action
 
       # git add and push
