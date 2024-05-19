@@ -13,8 +13,26 @@ on:
 jobs:
   auto-commit:
     runs-on: ubuntu-latest
-
-    # Step.1
     steps:
-      - name: poc schedule cron job
+      # Echo
+      - name: echo job
         run: echo "Welcome to 극락코딩"
+
+      # Checkout
+      - name: repository checkout
+        uses: actions/checkout@v2
+        with:
+          repository: DongGeon0908/github-action
+          token: ${{ secrets.GITHUB_TOKEN }}
+          path: github-action
+
+      # git add and push
+      - name: Add date and push
+        run: |
+          cd infra-study
+          date >> date.txt
+          git add .
+          git config --global user.email "github-actions@github.com"
+          git config --global user.name "github-actions"
+          git commit -am "Inject Date"
+          git push
