@@ -38,11 +38,12 @@ jobs:
           date >> auto-commit.txt
           git init
           git remote add origin https://github.com/DongGeon0908/github-action
+          git checkout origin main
           git add .
           git config --global user.email "wrjssmjdhappy@gmail.com"
           git config --global user.name "극락코딩"
           git commit -am "Inject Date and auto commit"
-          git push
+          git push --set-upstream origin main
 
       # End Job
       - name: end Job
