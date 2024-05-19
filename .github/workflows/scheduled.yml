@@ -1,1 +1,20 @@
-dd
+# ===================================================================
+# Default GitHub Scheduler Setup
+# ===================================================================
+
+name: Scheduled Jobs
+
+# https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows#schedule
+# github scheduler not supported seconds cron feature
+on:
+  schedule:
+    - cron: '1 * * * *'
+
+jobs:
+  print:
+    runs-on: ubuntu-latest
+
+    # Step.1
+    steps:
+      - name: poc schedule cron job
+        run: echo "Welcome to 극락코딩"
