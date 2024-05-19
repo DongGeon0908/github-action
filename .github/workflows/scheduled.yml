@@ -35,7 +35,6 @@ jobs:
       # git add and push
       - name: Add date and push
         run: |
-          cd scheduler
           date >> auto-commit.txt
           git add .
           git config --global user.email "github-actions@github.com"
