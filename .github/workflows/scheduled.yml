@@ -8,7 +8,7 @@ name: Scheduled Jobs
 # github scheduler not supported seconds cron feature
 on:
   schedule:
-    - cron: '*/1 * * * *' # Just Run Every minute https://crontab.guru
+    - cron: '0,5,10,15,20,25,30,35,40,45,50,55 * * * *' # Just Run Every minute https://crontab.guru
 
 jobs:
   auto-commit:
