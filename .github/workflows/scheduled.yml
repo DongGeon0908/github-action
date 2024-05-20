@@ -38,11 +38,10 @@ jobs:
           cd github-action
           git config --global user.email "wrjssmjdhappy@gmail.com"
           git config --global user.name "극락코딩"
-          git checkout -b main
           date >> auto-commit.txt
           git add .
-          git commit -am "Inject Date and auto commit"
-          git push -u origin main
+          git commit -m "Inject Date and auto commit"
+          git push origin main
 
       # End Job
       - name: end Job
