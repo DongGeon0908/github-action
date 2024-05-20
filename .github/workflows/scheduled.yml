@@ -9,7 +9,7 @@ name: Scheduled Jobs
 on:
   schedule:
     # Just Run Every 5minute https://crontab.guru
-    - cron: '*/5 * * * *'
+    - cron: '* */6 * * *'
   push:
     branches: 'main'
 
@@ -42,7 +42,7 @@ jobs:
           git config --global user.name "극락코딩"
           date >> auto-commit.txt
           git add .
-          git commit -m "Inject Date and auto commit"
+          git commit -m "auto commit with github-action (by 극락코딩)"
           git push origin main
 
       # End Job
